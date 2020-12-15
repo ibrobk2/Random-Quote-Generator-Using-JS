@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Computer Quotes | By Ibrahim Yusuf G.</title>
+    <style type="text/css">
+    	*{
+    		margin:0;
+    		padding: 0;
+    	}
+
+    	body{
+    		background-image: linear-gradient(65deg, #000, purple);
+            margin: 0;
+    	}
+
+    	button{
+    		margin-top: 150px;
+    		padding: 0.5em;
+    		width: 15vw;
+    		font-size: 16px;
+    		font-weight: bold;
+    		border-radius: 25px;
+    		outline: none;
+    		background: yellow;
+    	}
+
+        button:hover{
+            
+            background: lightyellow;
+            cursor: pointer;
+        }
+
+    	div.quote{
+    		height: 100vw;
+    		width: 100vw;
+    		text-align: center;
+    		padding: 5px;
+
+    	}
+    	h2{
+    		font-size: 40px;
+    		padding-top: 50px;
+    		font-family: sans-serif;
+    		color: #fff;
+            margin: 0 20px 0 20px;
+    	}
+    </style>
+</head>
+<body>
+    <script>
+function displayRandomQuote() {
+    var quotes = [
+    	"We are NOT in 20th century, I am NOT good with computers is NO longer acceptable",
+    	"All computer operations is either true or false",
+    	"Programmers are made to make bugs, the more code you write the more bugs you create",
+        "All computers wait at the same speed.",
+        "A good programmer looks both ways before crossing a one-way street.",
+        "Computers do not solve problems, they execute solutions.",
+        "The best thing about a boolean is even if you are wrong, you are only off by a bit",
+        "What you see is all what you have",
+        "Everything is amazing, but no one is happy. JS",
+        "Ubuntu is an ancient African word, meaning 'can’t configure Debian'",
+        "Without requirements or design, programming is the art of adding bugs to an empty 'text' file.",
+        "Programming is an Art",
+        "Don\'t learn to code only, but also create with code",
+        "Human Learns to code by writing codes not by only reading codes",
+        "He who does NOT code has no advantage over he who can not code"
+
+    ]
+    var rand = Math.floor(Math.random() * (quotes.length));
+    if(rand){
+    document.getElementById("quoteDisplay").innerHTML=(quotes[rand]);
+    //console.log(quotes[rand]);
+    }
+    
+}
+displayRandomQuote();
+    </script>
+    <div class="quote">
+    <h2 id="quoteDisplay"></h2>
+    <button onclick="displayRandomQuote()">Click to Generate a Quote</button>
+    </div>
+</body>
+</html>
